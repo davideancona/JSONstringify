@@ -79,11 +79,7 @@ function stringifyTrunc(value,options){
 	// start replace
 	if(typeof v!=='object')
 	    return v
-	let h // handler
-	if(typeof k==='number')
-	    h=array_handler
-	else
-	    h=object_handler
+	let h=typeof k==='number'?array_handler:object_handler
 	return insert(k,v) // be careful: insert can pop stuff and decrease the length of a!
     }
     // start stringifyTrunc
