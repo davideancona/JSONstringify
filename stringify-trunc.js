@@ -77,7 +77,7 @@ function stringifyTrunc(value,options){
 	    return try_push(v) // try pushing the child node on the empty stack, fails only if depth===0
 	}
 	// start replace
-	if(typeof v!=='object')
+	if(v===null || typeof v!=='object')
 	    return v
 	let h=typeof k==='number'?array_handler:object_handler
 	return insert(k,v) // be careful: insert can pop stuff and decrease the length of a!
