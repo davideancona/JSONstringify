@@ -63,3 +63,4 @@ console.assert(stringifyTrunc(a)==='[{"a":1,"b":"[Object]"},{"a":"[Object]","b":
 console.assert(stringifyTrunc(a,{depth:3})==='[{"a":1,"b":[1,"[Object]"]},{"a":[1,"[Object]"],"b":1}]')
 console.assert(stringifyTrunc(a,{depth:4})==='[{"a":1,"b":[1,{"a":1,"b":2}]},{"a":[1,{"a":1,"b":2}],"b":1}]')
 
+console.assert(stringifyTrunc({a:{b:null,c:undefined},b:null,c:undefined})==='{"a":{"b":null},"b":null}')

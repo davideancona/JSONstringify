@@ -36,9 +36,11 @@ function shallow_copy(v){
    visit_cycles: cycles are visited if set to true, defaults to false
 */
 function stringifyTrunc(value,options){
-    // depth at which truncation occurs
+
     if(options===undefined)
 	options={depth:default_depth}
+
+    // depth at which truncation occurs
     const depth=typeof options.depth==='number'&&options.depth>=0?Math.floor(options.depth):default_depth
     const exit_cycles=!(options.visit_cycles||false) 
     /* 
