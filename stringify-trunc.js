@@ -22,8 +22,8 @@ let object_handler={
 function shallow_copy(v){
     if(Array.isArray(v))
 	return v.slice()
-    let copy={} // prepares a shallow copy of v where getters are not evaluated	
-    for(let prop of Object.getOwnPropertyNames(v))
+    let copy={} // prepares a shallow copy of v where getters are not evaluated
+    for(const prop of Object.getOwnPropertyNames(v))
     {
 	let desc=Object.getOwnPropertyDescriptor(v,prop) 
 	Object.defineProperty(copy,prop,desc.get?{value:getter_trunc,enumerable:true}:desc)
