@@ -37,8 +37,7 @@ function shallow_copy(v){
 */
 function stringifyTrunc(value,options){
 
-    if(options===undefined)
-	options={depth:default_depth}
+    options=options||{depth:default_depth}
 
     // depth at which truncation occurs
     const depth=typeof options.depth==='number'&&options.depth>=0?Math.floor(options.depth):default_depth
